@@ -1,0 +1,15 @@
+{
+  "name": "tspeigner-win_mysql",
+  "version": "0.1.0",
+  "author": "Tommy Speigner & Sean Techavatnavisal",
+  "summary": "Install, configure and manage MySQL on Windows",
+  "license": "Apache-2.0",
+  "source": "https://github.com/tspeigner/tspeigner-win_mysql",
+  "project_page": "https://github.com/tspeigner/tspeigner-win_mysql",
+  "issues_url": "https://github.com/tspeigner/tspeigner-win_mysql/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
