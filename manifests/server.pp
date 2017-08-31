@@ -14,8 +14,13 @@ class win_mysql::server (
             }
         }
         default: {
-            package { 'mysql':
-                ensure => installed,
+            staging::file { "mysql-${server_package_version}-winx64.zip":
+                source => "https://dev.mysql.com/get/Downloads/MySQL-${major_version}/mysql-${server_package_version}-winx64.zip",
+            }
+            staging::extract { "mysql-${server_package_version}-winx64.zip":
+                target  => 'c:/tools/',
+                creates => 'c:/tools/mysql',
+                require => Staging::File["mysql-${server_package_version}-winx64.zip"],
             }
         }
     }
