@@ -4,7 +4,7 @@
 class win_mysql::server (
     $major_version          = '5.7',
     $bind_address           = '127.0.0.1' ,
-    $server_package_version = '5.7.19',
+    $server_package_version = '5.7.18',
 ) {
   # Install packages based on architecture x86 or win32
   case $::architecture {
