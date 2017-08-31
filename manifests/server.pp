@@ -15,11 +15,12 @@ class win_mysql::server (
         }
         # Requires staging module: https://forge.puppet.com/puppet/staging
         default: {
-            staging::file { "mysql-${server_package_version}-winx64.zip":
+            remote_file { "c:/tools/mysql-${server_package_version}-winx64.zip":
+                ensure => present,
                 source => "https://dev.mysql.com/get/Downloads/MySQL-${major_version}/mysql-${server_package_version}-winx64.zip",
             }
-            staging::extract { "mysql-${server_package_version}-winx64.zip":
-                target  => 'c:/tools/',
+            unzip { "mysql-${server_package_version}-winx64.zip":
+                source  => "c:/tools/mysql-${server_package_version}-winx64.zip",
                 creates => 'c:/tools/mysql',
                 require => Staging::File["mysql-${server_package_version}-winx64.zip"],
             }
