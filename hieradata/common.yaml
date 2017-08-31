@@ -1,0 +1,34 @@
+---
+win_mysql::params:
+  bind_address:             '127.0.0.1'
+  win_arch:                 $::architecture
+  default_engine:           'UNSET'
+  manage_service:           true
+  package_ensure:           'present'
+  purge_conf_dir:           false
+  max_connections:          151
+  port:                     3306
+  max_allowed_packet:       '16M'
+  restart :                 true
+  ssl:                      false
+  key_buffer:               '16M'
+  thread_stack:             '256K'
+  thread_cache_size:        8
+  myisam_recover:           'BACKUP'
+  query_cache_limit:        '1M'
+  query_cache_size:         '16M'
+  expire_logs_days:         10
+  max_binlog_size:          '100M'
+  service_name:             'mysqld'
+  client_package_name:      'workbench'
+  client_package_version:   undef
+  client_package_ensure:    true
+  server_package_name:      'mysql'
+  server_package_version:   undef
+  mysql_major_version:      undef #can be 5.5, 5.6 or 5.7
+  server_package_ensure:    true
+  mysql_basedir:            'c:\tools\mysql\current'
+  mysql_installdir:         'c:\tools\mysql'
+  mysql_bindir:             'c:\tools\mysql\current\bin'
+  config_file:              'c:\tools\mysql\current\my.ini'
+  mysql_datadir:            'c:\ProgramData\MySQL\data'
