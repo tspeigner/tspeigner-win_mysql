@@ -22,7 +22,7 @@ class win_mysql::server (
             unzip { "mysql-${server_package_version}-winx64.zip":
                 source  => "c:/tools/mysql-${server_package_version}-winx64.zip",
                 creates => 'c:/tools/mysql',
-                require => Staging::File["mysql-${server_package_version}-winx64.zip"],
+                require => Remote_file["c:/tools/mysql-${server_package_version}-winx64.zip"],
             }
         }
     }
