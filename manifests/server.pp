@@ -6,6 +6,7 @@ class win_mysql::server (
     $bind_address           = '127.0.0.1' ,
     $server_package_version = '5.7.18',
 ) {
+    include unzip
     # Install MySQL with Chocolatey, if it is installed
     case $chocolateyversion {
         '0': {
@@ -13,6 +14,7 @@ class win_mysql::server (
               message => 'Chocolatey is not installed'
             }
         }
+        # Requires staging module: https://forge.puppet.com/puppet/staging
         default: {
             staging::file { "mysql-${server_package_version}-winx64.zip":
                 source => "https://dev.mysql.com/get/Downloads/MySQL-${major_version}/mysql-${server_package_version}-winx64.zip",
