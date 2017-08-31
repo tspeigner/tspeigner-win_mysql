@@ -3,14 +3,16 @@
 #
 class win_mysql::server {
   # Install required package Microsoft Visual C++ 2015 Redistributable 
-  package { 'vcredist2015':
+  # https://www.microsoft.com/en-us/download/details.aspx?id=48145 
+  package { 'vcredist2013':
       ensure   => installed,
       provider => chocolatey,
       before   => Package['mysql'],
-      notify   => Reboot['after_vcredist2015'],
+      notify   => Reboot['after_vcredist2013'],
   }
   # Reboot the server after installing Microsoft Visual C++ 2015 Redistributable
-  reboot { 'after_vcredist2015':
+  # Reboot module required - https://forge.puppet.com/puppetlabs/reboot
+  reboot { 'after_vcredist2013':
     apply => immediately,
   }
 
