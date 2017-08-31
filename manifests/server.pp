@@ -6,7 +6,6 @@ class win_mysql::server (
     $bind_address           = '127.0.0.1' ,
     $server_package_version = '5.7.18',
 ) {
-    include unzip
     # Install MySQL with Chocolatey, if it is installed
     case $chocolateyversion {
         '0': {
@@ -44,4 +43,5 @@ class win_mysql::server (
 #    }
 
 #  }
+include unzip
 }
