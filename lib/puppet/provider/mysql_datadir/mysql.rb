@@ -5,7 +5,7 @@ Puppet::Type.type(:mysql_datadir).provide(:mysql, parent: Puppet::Provider::Mysq
   initvars
 
   # Make sure we find mysqld on CentOS and mysql_install_db on Gentoo and Solaris 11
-  ENV['PATH'] = ENV['PATH'] + ':/usr/libexec:/usr/share/mysql/scripts:/opt/rh/mysql55/root/usr/bin:/opt/rh/mysql55/root/usr/libexec:/usr/mysql/5.5/bin:/usr/mysql/5.6/bin:/usr/mysql/5.7/bin'
+  ENV['PATH'] = ENV['PATH'] + 'c:\\tools\\mysql\\current\\bin'
 
   commands mysqld: 'mysqld'
   commands mysql_install_db: 'mysql_install_db'
@@ -17,7 +17,7 @@ Puppet::Type.type(:mysql_datadir).provide(:mysql, parent: Puppet::Provider::Mysq
     user                     = @resource.value(:user) || 'mysql'
     basedir                  = @resource.value(:basedir)
     datadir                  = @resource.value(:datadir) || @resource[:name]
-    log_error                = @resource.value(:log_error) || '/var/tmp/mysqld_initialize.log'
+    log_error                = @resource.value(:log_error) || 'C:\\ProgramData\\MySQL\\data\\mysqld_initialize.log'
     # rubocop:enable Lint/UselessAssignment
     unless defaults_extra_file.nil?
       unless File.exist?(defaults_extra_file)
