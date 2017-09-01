@@ -4,7 +4,7 @@ Puppet::Type.newtype(:mysql_user) do
 
   ensurable
 
-  autorequire(:file) { '/root/.my.cnf' }
+  autorequire(:file) { 'C:\\tools\\mysql\\current\\my.ini' }
   autorequire(:class) { 'mysql::server' }
 
   newparam(:name, namevar: true) do
@@ -13,7 +13,7 @@ Puppet::Type.newtype(:mysql_user) do
       # http://dev.mysql.com/doc/refman/5.5/en/identifiers.html
       # If at least one special char is used, string must be quoted
       # http://stackoverflow.com/questions/8055727/negating-a-backreference-in-regular-expressions/8057827#8057827
-      mysql_version = Facter.value(:mysql_version)
+      mysql_version = Facter.value(:win_mysql_version)
       # rubocop:disable Lint/AssignmentInCondition
       # rubocop:disable Lint/UselessAssignment
       if matches = %r{^(['`"])((?:(?!\1).)*)\1@([\w%\.:\-\/]+)$}.match(value)
