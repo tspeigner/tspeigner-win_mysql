@@ -2,7 +2,7 @@
 # win_mysql::server
 #
 class win_mysql::server (
-    $server_package_version,
+    $server_package_version = installed,
 ){
   # Install required package Microsoft Visual C++ 2013 Redistributable 
   # https://www.microsoft.com/en-us/download/details.aspx?id=40784 
@@ -19,8 +19,8 @@ class win_mysql::server (
   }
 
   package { 'mysql':
-      #ensure   => $server_package_version,
-      ensure   => installed,
+      ensure   => $server_package_version,
+      #ensure   => installed,
       #ensure   => absent,
       provider => chocolatey,
   }
