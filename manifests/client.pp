@@ -6,7 +6,8 @@ class win_mysql::client (
 ) {
     # Install package with Chocolatey
     package { 'mysql.workbench':
-        ensure   => installed,
-        provider => chocolatey,
+        ensure          => installed,
+        provider        => chocolatey,
+        install_options => ['-installArgs', '/INSTALLDIR=C:\tools\mysql\client'],
     }
 }
