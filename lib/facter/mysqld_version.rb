@@ -1,6 +1,6 @@
-Facter.add('mysqld_version') do
+Facter.add('win_mysqld_version') do
   setcode do
-    mysqld_ver = Facter::Util::Resolution.exec('mysqld -V')
-    mysqld_ver.match(%r{\d+\.\d+\.\d+})[0] if mysqld_ver
+    win_mysqld_ver = Facter::Util::Resolution.exec('mysqld -V')
+    win_mysqld_ver.match(%r{\d+\.\d+\.\d+})[0] if win_mysqld_ver
   end
 end
