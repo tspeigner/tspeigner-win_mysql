@@ -8,14 +8,14 @@ Puppet::Type.type(:mysql_datadir).provide(:mysql, parent: Puppet::Provider::Mysq
   ENV['PATH'] = ENV['PATH'] + 'c:\\tools\\mysql\\current\\bin'
 
   commands mysqld: 'mysqld'
-  commands mysql_install_db: 'mysql_install_db'
+ 
   # rubocop:disable Lint/UselessAssignment
   def create
     name                     = @resource[:name]
     insecure                 = @resource.value(:insecure) || true
     defaults_extra_file      = @resource.value(:defaults_extra_file)
     user                     = @resource.value(:user) || 'mysql'
-    basedir                  = @resource.value(:basedir) || 'c:\tools\mysql\current'
+    basedir                  = @resource.value(:basedir) || 'c:\\tools\\mysql\\current'
     datadir                  = @resource.value(:datadir) || @resource[:name]
     log_error                = @resource.value(:log_error) || 'C:\\ProgramData\\MySQL\\data\\mysqld_initialize.log'
     # rubocop:enable Lint/UselessAssignment

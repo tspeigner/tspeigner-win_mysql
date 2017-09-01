@@ -3,7 +3,7 @@ Puppet::Type.newtype(:mysql_plugin) do
 
   ensurable
 
-  autorequire(:file) { '/root/.my.cnf' }
+  autorequire(:file) { 'c:\\tools\\mysql\\current\\my.ini' }
 
   newparam(:name, namevar: true) do
     desc 'The name of the MySQL plugin to manage.'

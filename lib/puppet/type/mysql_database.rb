@@ -3,7 +3,7 @@ Puppet::Type.newtype(:mysql_database) do
 
   ensurable
 
-  autorequire(:file) { 'C:\tools\mysql\current' }
+  autorequire(:file) { 'C:\\tools\\mysql\\current' }
   autorequire(:class) { 'win_mysql::server' }
 
   newparam(:name, namevar: true) do
