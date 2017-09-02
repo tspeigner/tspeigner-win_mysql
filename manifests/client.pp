@@ -9,6 +9,6 @@ class win_mysql::client (
         ensure          => installed,
         provider        => chocolatey,
 #        install_options => ['-installArgs', '/QUIET', '/INSTALLDIR=C:\tools\mysql\client'],
-        install_options => ['-override', '-installArgs', '"', '/PASSIVE', '/NORESTART', '/INSTALLDIR=C:\tools\mysql\client', '"'],
+        install_options => ['-override', '-installArgs', '"', '/passive', '/norestart', '/INSTALLDIR=C:\tools\mysql\client', '"'],
     }
 }
