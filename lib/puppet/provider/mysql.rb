@@ -4,7 +4,7 @@ class Puppet::Provider::Mysql < Puppet::Provider
   initvars
 
   # Make sure we find mysql commands on CentOS and FreeBSD
-  ENV['PATH'] = ENV['PATH'] + ':/usr/libexec:/usr/local/libexec:/usr/local/bin'
+  ENV['PATH'] = ENV['PATH'] + 'c:\\tools\\mysql\\current\\bin'
 
   # rubocop:disable Style/HashSyntax
   commands :mysql      => 'mysql'
@@ -14,18 +14,7 @@ class Puppet::Provider::Mysql < Puppet::Provider
 
   # Optional defaults file
   def self.defaults_file
-    "--defaults-extra-file=#{Facter.value(:root_home)}/.my.cnf" if File.file?("#{Facter.value(:root_home)}/.my.cnf")
-  end
-
-  def self.mysqld_type
-    # find the mysql "dialect" like mariadb / mysql etc.
-    mysqld_version_string.scan(%r{mariadb}i) { return 'mariadb' }
-    mysqld_version_string.scan(%r{\s\(percona}i) { return 'percona' }
-    'mysql'
-  end
-
-  def mysqld_type
-    self.class.mysqld_type
+    "--defaults-extra-file=#{Facter.value(:root_home)}/.my.ini" if File.file?("#{Facter.value(:root_home)}/.my.ini")
   end
 
   def self.mysqld_version_string

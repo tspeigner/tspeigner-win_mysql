@@ -10,17 +10,12 @@ Puppet::Type.newtype(:mysql_datadir) do
   end
 
   newparam(:basedir) do
-    desc 'The basedir name, default /usr.'
+    desc 'The basedir name, default .'
     newvalues(%r{^/})
   end
 
   newparam(:user) do
     desc 'The user for the directory default mysql (name, not uid).'
-  end
-
-  newparam(:defaults_extra_file) do
-    desc 'MySQL defaults-extra-file with absolute path (*.cnf).'
-    newvalues(%r{^\/.*\.cnf$})
   end
 
   newparam(:insecure, boolean: true) do
