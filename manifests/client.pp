@@ -8,6 +8,7 @@ class win_mysql::client (
     package { 'mysql.workbench':
         ensure          => installed,
         provider        => chocolatey,
-        install_options => ['-installArgs', '/QUIET', '/INSTALLDIR=C:\tools\mysql\client'],
+#        install_options => ['-installArgs', '/QUIET', '/INSTALLDIR=C:\tools\mysql\client'],
+        install_options => ['-installArgs', '"', '/VERYSILENT', '/NORESTART', '/QUIET', '/INSTALLDIR=C:\tools\mysql\client', '"'],
     }
 }
