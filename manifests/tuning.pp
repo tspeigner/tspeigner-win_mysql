@@ -69,7 +69,7 @@ class win_mysql::tuning (
   Ini_Setting {
       path    => 'c:/tools/mysql/current/my.ini',
       section => 'mysqld',
-      },
+      }
  
   # Start of [mysqld] settings
   ini_setting { 'innodb_buffer_pool_size':
@@ -104,7 +104,7 @@ class win_mysql::tuning (
   }
   ini_setting { 'query_cache_type':
     setting => 'query_cache_type',
-    value   => $$query_cache_type_value,
+    value   => $query_cache_type_value,
   }
   ini_setting {'query_cache_size':
     setting => 'query_cache_size',
