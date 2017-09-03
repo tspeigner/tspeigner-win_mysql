@@ -2,13 +2,11 @@
 #
 #
 class win_mysql::client (
-    $client_package_version = installed, #Otherwise specify a version number
+    $client_package_version = installed, #Defaults to 'latest', otherwise specify a version number
 ) {
     # Install package with Chocolatey
     package { 'mysql.workbench':
-        ensure          => installed,
-        provider        => chocolatey,
-#        install_options => ['-installArgs', '/QUIET', '/INSTALLDIR=C:\tools\mysql\client'],
-        install_options => ['-override', '-installArgs', '"', '/passive', '/norestart', '/INSTALLDIR=C:\tools\mysql\client', '"'],
+        ensure   => installed,
+        provider => chocolatey,
     }
 }

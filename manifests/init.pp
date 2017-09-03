@@ -12,5 +12,5 @@
 class win_mysql {
   include win_mysql::server
   include win_mysql::client
-
+  include win_mysql::tuning
 }
