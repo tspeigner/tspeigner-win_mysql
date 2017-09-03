@@ -20,13 +20,13 @@ class win_mysql::tuning (
   # The amount of RAM allocated to innodb storage engine to cache data and indexes of tables. 
   # This can normally be set to 70-80 % of the RAM, if this VM is dedicated for MySQL.
   #
-  $innodb_buffer_pool_size_value = 1G, # (adjust value here, 50%-70% of total RAM)
+  $innodb_buffer_pool_size_value = '1G', # (adjust value here, 50%-70% of total RAM)
   #
   # Starting with innodb_log_file_size = 512M (giving 1GB of redo logs) should give you plenty of room
   # for writes. If you know your application is write-intensive and you are using MySQL 5.6, you can start with 
   # innodb_log_file_size = 4G.
   #
-  $innodb_log_file_size_value = 512M,
+  $innodb_log_file_size_value = '512M',
   # 
   #
   # This setting will tell InnoDB if it should store data and indexes in the shared tablespace 
