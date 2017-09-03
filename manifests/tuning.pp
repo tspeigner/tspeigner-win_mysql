@@ -95,7 +95,7 @@ class win_mysql::tuning (
   }
   ini_setting {'innodb_buffer_pool_instances':
     setting => 'innodb_buffer_pool_instances',
-    value   => $innodb_buffer_pool_instances,
+    value   => $innodb_buffer_pool_instances_value,
   }
 
   ini_setting { 'max_connections':
