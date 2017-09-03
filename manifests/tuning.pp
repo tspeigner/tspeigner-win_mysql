@@ -3,6 +3,8 @@
 #
 # This class requires the Puppet ini module 
 # https://forge.puppet.com/puppetlabs/inifile
+#
+#
 class win_mysql::tuning (
   #########################################
   # InnoDB settings
@@ -24,7 +26,7 @@ class win_mysql::tuning (
   # for writes. If you know your application is write-intensive and you are using MySQL 5.6, you can start with 
   # innodb_log_file_size = 4G.
   #
-  $innodb_log_file_size_value = M,
+  $innodb_log_file_size_value = 512M,
   # 
   #
   # This setting will tell InnoDB if it should store data and indexes in the shared tablespace 
@@ -41,10 +43,10 @@ class win_mysql::tuning (
   $innodb_flush_log_at_trx_commit_value = 1,
   #
   #
-  $innodb_stats_on_metadata_value = OFF,
+  $innodb_stats_on_metadata_value = 'OFF',
   #
   #
-  $innodb_buffer_pool_instances_value = 8 #(or 1 if innodb_buffer_pool_size < 1GB) 
+  $innodb_buffer_pool_instances_value = 8, #(or 1 if innodb_buffer_pool_size < 1GB) 
   #
   #
   ######################################### 
@@ -57,7 +59,7 @@ class win_mysql::tuning (
   $query_cache_type_value = 0,
   #
   #
-  $query_cache_size_value = 0; #(disabling mutex)
+  $query_cache_size_value = 0, #(disabling mutex)
   #
   #
   #########################################
