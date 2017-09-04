@@ -21,11 +21,11 @@ class win_mysql::server (
 
   package { 'mysql':
       #ensure   => $win_mysql::params::server_package_version,
-      ensure   => uninstalled,
+      ensure   => absent,
       provider => chocolatey,
   }
   service { "mysql":
-      ensure     => running,
-      enable     => true,
+      ensure => running,
+      enable => true,
   }
 }
