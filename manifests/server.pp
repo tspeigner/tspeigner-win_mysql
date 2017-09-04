@@ -2,7 +2,7 @@
 # win_mysql::server
 #
 class win_mysql::server (
-    #default is installed, otherwise replace with version number
+    #default is installed, otherwise replace with version number. Change values in params.pp
     $server_package_version = $win_mysql::params::server_package_version,
 ) inherits win_mysql::params {
   # Install required package Microsoft Visual C++ 2013 Redistributable 
@@ -18,13 +18,11 @@ class win_mysql::server (
   reboot { 'after_vcredist2013':
     apply => immediately,
   }
-
   package { 'mysql':
       ensure   => $server_package_version,
-      #ensure   => absent,
       provider => chocolatey,
   }
-  service { 'mysql':
+  service { 'mysqld':
       ensure => running,
       enable => true,
   }

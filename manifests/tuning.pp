@@ -53,7 +53,7 @@ class win_mysql::tuning (
   # Basic settings
   #
   # If you are often facing the ‘Too many connections’ error, max_connections is too low.
-  $max_connections_value = 151,
+  $max_connections_value = $win_mysql::params::max_connections,
   # 
   # 
   $query_cache_type_value = 0,
@@ -62,14 +62,15 @@ class win_mysql::tuning (
   $query_cache_size_value = 0, #(disabling mutex)
   #
   #
+  $max_allowed_packet_value = $win_mysql::params::max_allowed_packet,
   #########################################
 
-) {
+) inherits win_mysql::params {
   require win_mysql::server
-  
+
   # Ini_Setting Defaults
   Ini_Setting {
-      path    => 'c:/tools/mysql/current/my.ini',
+      path    => $win_mysql::params::config_file,
       section => 'mysqld',
       }
  
@@ -110,6 +111,10 @@ class win_mysql::tuning (
   }
   ini_setting {'query_cache_size':
     setting => 'query_cache_size',
+    value   => $query_cache_size_value,
+  }
+  ini_setting {'max_allowed_packet':
+    setting => 'max_allowed_packet',
     value   => $query_cache_size_value,
   }
 }
