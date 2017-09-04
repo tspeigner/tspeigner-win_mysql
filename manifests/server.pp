@@ -4,8 +4,7 @@
 class win_mysql::server (
     #default is installed, otherwise replace with version number
     $server_package_version = $win_mysql::params::server_package_version,
-){
-    inherits win_mysql::params
+) inherits win_mysql::params {
   # Install required package Microsoft Visual C++ 2013 Redistributable 
   # https://www.microsoft.com/en-us/download/details.aspx?id=40784 
   package { 'vcredist2013':
