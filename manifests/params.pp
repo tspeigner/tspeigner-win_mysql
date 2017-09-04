@@ -13,7 +13,7 @@ class win_mysql::params {
   $ssl                    = false
   $client_package_ensure  = true
   $server_package_ensure  = true
-  $server_package_version = '5.7.17'
+  $server_package_version = '5.7.18'
   $choco_mysql_basedir    = 'c:\tools\mysql\current'
   $choco_mysql_bindir     = 'c:\tools\mysql\current\bin'
   $choco_config_file      = 'c:\tools\mysql\current\my.ini'
