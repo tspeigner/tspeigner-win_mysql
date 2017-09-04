@@ -22,7 +22,7 @@ class win_mysql::server (
       ensure   => $server_package_version,
       provider => chocolatey,
   }
-  service { 'mysqld':
+  service { 'MySQL':
       ensure => running,
       enable => true,
   }
