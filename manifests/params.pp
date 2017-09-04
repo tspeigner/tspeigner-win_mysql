@@ -10,7 +10,7 @@ class win_mysql::params {
   $max_allowed_packet     = '16M'
   $client_package_version = 'latest'
   $server_package_version = 'latest'
-  $mysql_bindir           = 'c:\\tools\\mysql\\current\\bin'
-  $config_file            = 'c:\\tools\\mysql\\current\\my.ini'
+  $mysql_bindir           = 'c:/tools/mysql/current/bin'
+  $config_file            = 'c:/tools/mysql/current/my.ini'
 
 }
