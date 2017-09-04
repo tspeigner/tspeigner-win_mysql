@@ -4,7 +4,7 @@
 #
 #
 class win_mysql::service {
-    service { 'mysqld':
+    service { 'MySQL':
         ensure => running,
         enable => true,
     }
