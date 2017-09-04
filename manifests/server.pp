@@ -21,7 +21,6 @@ class win_mysql::server (
 
   package { 'mysql':
       ensure   => $server_package_version,
-      #ensure   => absent,
       provider => chocolatey,
   }
   service { 'mysql':
