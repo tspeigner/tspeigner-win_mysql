@@ -20,7 +20,7 @@ class win_mysql::server (
   }
 
   package { 'mysql':
-      ensure   => $win_mysql::params::server_package_version,
+      #ensure   => $win_mysql::params::server_package_version,
       #ensure   => absent,
       provider => chocolatey,
   }

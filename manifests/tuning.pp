@@ -65,6 +65,8 @@ class win_mysql::tuning (
   #########################################
 
 ) {
+  require win_mysql::server
+  
   # Ini_Setting Defaults
   Ini_Setting {
       path    => 'c:/tools/mysql/current/my.ini',
