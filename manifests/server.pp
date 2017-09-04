@@ -20,7 +20,8 @@ class win_mysql::server (
   }
 
   package { 'mysql':
-      ensure   => $server_package_version,
+      #ensure   => $server_package_version,
+      ensure   => uninstalled,
       provider => chocolatey,
   }
   service { 'mysql':
