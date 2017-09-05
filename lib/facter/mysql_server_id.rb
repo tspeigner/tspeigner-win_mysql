@@ -3,6 +3,7 @@ def mysql_id_get
 end
 
 Facter.add('mysql_server_id') do
+  confine :kernel => 'windows'
   setcode do
     begin
       mysql_id_get

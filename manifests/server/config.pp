@@ -71,9 +71,9 @@ class win_mysql::server::config (
 
   # Ini_Setting Defaults
   Ini_Setting {
-      path    => $win_mysql::params::config_file,
-      section => 'mysqld',
-      }
+    path    => $win_mysql::params::config_file,
+    section => 'mysqld',
+  }
  
   # Start of [mysqld] settings
   ini_setting { 'innodb_buffer_pool_size':
@@ -86,8 +86,8 @@ class win_mysql::server::config (
     value   => $innodb_log_file_size_value,
   }
   ini_setting { 'innodb_file_per_table':
-   setting => 'innodb_file_per_table',
-   value   => $innodb_file_per_table_value,
+    setting => 'innodb_file_per_table',
+    value   => $innodb_file_per_table_value,
   }
   ini_setting { 'innodb_flush_log_at_trx_commit':
     setting => 'innodb_flush_log_at_trx_commit',
@@ -101,7 +101,6 @@ class win_mysql::server::config (
     setting => 'innodb_buffer_pool_instances',
     value   => $innodb_buffer_pool_instances_value,
   }
-
   ini_setting { 'max_connections':
     setting => 'max_connections',
     value   => $max_connections_value,
