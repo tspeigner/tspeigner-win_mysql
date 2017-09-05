@@ -26,7 +26,7 @@ class win_mysql::server::config (
   # for writes. If you know your application is write-intensive and you are using MySQL 5.6, you can start with 
   # innodb_log_file_size = 4G.
   #
-  $innodb_log_file_size_value = '512M',
+  $innodb_log_file_size_value = '1G',
   # 
   #
   # This setting will tell InnoDB if it should store data and indexes in the shared tablespace 
