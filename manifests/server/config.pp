@@ -1,11 +1,11 @@
 # Tune MySQL instances.
-# Class: win_mysql::tuning 
+# Class: win_mysql::server::config 
 #
 # This class requires the Puppet ini module 
 # https://forge.puppet.com/puppetlabs/inifile
 #
 #
-class win_mysql::tuning (
+class win_mysql::server::config (
   #########################################
   # InnoDB settings
   #
@@ -67,6 +67,7 @@ class win_mysql::tuning (
 
 ) inherits win_mysql::params {
   require win_mysql::server
+  
 
   # Ini_Setting Defaults
   Ini_Setting {

@@ -1,9 +1,0 @@
-Work on the MySQL (mysql) to Windows MySQL (win_mysql) module.
-
-1. Forked the original repo. https://github.com/puppetlabs/puppetlabs-mysql
-2. Cloned the repo locally.
-3. Search and replace on on falls (mysql >> win_mysql)
-4. Create new local class with win_mysql to see where errors start happening.
-5. Case statement
-    If chocolatey is installed then use it as the package provider
-    else use the remote_file module to download the file then use the archive module to extract it.
