@@ -1,0 +1,20 @@
+{
+  "Gemfile": "36c376f27539ded2a321b2bd432e843b",
+  "README.md": "e0ad2122d0e4fd74482f60cc6bcd1b29",
+  "Rakefile": "f4692851f7e9afcdb02721319e3f18b9",
+  "examples/init.pp": "71b30a0c5cb177a901203031e31c6d33",
+  "hieradata/common.yaml": "d41d8cd98f00b204e9800998ecf8427e",
+  "lib/facter/mysql_server_id.rb": "12b8876d21204a95deb5e63a3c6ebf1b",
+  "lib/facter/mysql_version.rb": "9875015af853a3d56b3506b4d3bf3012",
+  "manifests/client/install.pp": "5afe6bf415c81484365e732296dec28c",
+  "manifests/client.pp": "5e7b1c2d81c28e05d0700296e972c116",
+  "manifests/init.pp": "2cdcf015355782b10a56623e0e1cc4fe",
+  "manifests/params.pp": "51f8887d78e75384280ca7e2f20299a2",
+  "manifests/server/config.pp": "3f9b3803a1d9d87fecfd4b862c7d9448",
+  "manifests/server/install.pp": "78f8475b629bf009b6af87e196d5ecfa",
+  "manifests/server/service.pp": "1ed394089bc19a5f57b86eb07d3d59a1",
+  "manifests/server.pp": "ea811cf703eb945fadad3492b18287d1",
+  "metadata.json": "c3ec6026373e6802c624beecbb7426ff",
+  "spec/classes/init_spec.rb": "ecabaafb6a5590e1d36c5cde2366b1f1",
+  "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc"
+}
