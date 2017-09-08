@@ -47,3 +47,5 @@ Fork it, develop it, push it.  Or just give feedback, you won't hurt my feelings
 0.1.0 is the first release and there will definitely be cleanup.  Looking to move the params to hiera.
 
 0.1.1 fixes some linting errors adds OS support information and fixed unbounded ranges on dependencies.
+
+0.1.2 added tags to metadata. 
