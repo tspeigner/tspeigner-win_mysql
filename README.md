@@ -11,6 +11,8 @@
 * [Development](#development)
 * [Release Notes](#release-notes)
 
+(https://travis-ci.org/tspeigner/tspeigner-win_mysql.svg?branch=master)
+
 ## Description
 
 This module installs both MySQL Server and MySQL Client (Workbench).  We use [Chocolatey](https://forge.puppet.com/puppetlabs/chocolatey) for the installation of both packages, Puppet Labs [inifile](https://forge.puppet.com/puppetlabs/inifile) module to manage the my.ini settings, the [Reboot](https://forge.puppet.com/puppetlabs/reboot) module which is used for installing the required [vcredist2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) package required for the server to operate properly [reference](https://github.com/ferventcoder/chocolatey-packages/issues/253).  
