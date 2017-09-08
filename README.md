@@ -11,7 +11,7 @@
 * [Development](#development)
 * [Release Notes](#release-notes)
 
-(https://travis-ci.org/tspeigner/tspeigner-win_mysql.svg?branch=master)
+![Travis Status](https://travis-ci.org/tspeigner/tspeigner-win_mysql.svg?branch=master "Travis Status")
 
 ## Description
 
