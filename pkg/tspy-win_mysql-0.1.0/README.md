@@ -45,3 +45,5 @@ Fork it, develop it, push it.  Or just give feedback, you won't hurt my feelings
 ## Release Notes
 
 0.1.0 is the first release and there will definitely be cleanup.  Looking to move the params to hiera.
+
+0.1.1 fixes some linting errors adds OS support information and fixed unbounded ranges on dependencies.

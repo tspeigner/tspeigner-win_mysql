@@ -67,12 +67,14 @@ class win_mysql::server::config (
 
 ) inherits win_mysql::params {
   require win_mysql::server
+  
 
   # Ini_Setting Defaults
   Ini_Setting {
     path    => $win_mysql::params::config_file,
     section => 'mysqld',
   }
+ 
   # Start of [mysqld] settings
   ini_setting { 'innodb_buffer_pool_size':
     section => 'mysqld',
