@@ -50,4 +50,6 @@ Fork it, develop it, push it.  Or just give feedback, you won't hurt my feelings
 
 0.1.1 fixes some linting errors adds OS support information and fixed unbounded ranges on dependencies.
 
-0.1.2 added tags to metadata. 
+0.1.2 added tags to metadata.
+
+0.1.3 //TO ADD
