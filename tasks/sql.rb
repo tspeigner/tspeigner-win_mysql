@@ -1,6 +1,7 @@
 #!/opt/puppetlabs/puppet/bin/ruby
 require 'json'
-require 'open3'
+#require 'open3'
+require 'win32/open3'
 require 'puppet'
 
 def get(sql, database, user, password)
