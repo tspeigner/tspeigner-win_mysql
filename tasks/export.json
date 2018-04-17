@@ -1,22 +1,7 @@
 {
-  "description": "Allows you to backup your database to local file.",
-  "input_method": "stdin",
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "A short description of this task",
   "parameters": {
-    "database": {
-      "description": "Database to connect to",
-      "type": "Optional[String[1]]"
-    },
-    "user": {
-      "description": "The user",
-      "type": "Optional[String[1]]"
-    },
-    "password": {
-      "description": "The password",
-      "type": "Optional[String[1]]"
-    },
-     "file": {
-      "description": "Path to file you want backup to",
-      "type": "String[1]"
-    }
   }
 }
