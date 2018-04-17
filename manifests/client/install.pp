@@ -1,12 +1,10 @@
-# Class: win_mysql::client::install 
+# Class: win_mysql::client
 #
 #
-class win_mysql::client::install (
-  $client_package_version = $win_mysql::params::client_package_version,
-) {
+class win_mysql::client::install {
     # Install package with Chocolatey
     package { 'mysql.workbench':
-      ensure   => $client_package_version,
+      ensure   => $win_mysql::client::install::workbench_version,
       provider => chocolatey,
     }
 }

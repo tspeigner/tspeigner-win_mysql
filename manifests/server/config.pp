@@ -70,12 +70,11 @@ class win_mysql::server::config (
 
   # Ini_Setting Defaults
   Ini_Setting {
-    path    => $win_mysql::params::config_file,
+    path    => $win_mysql::server::config::config_file,
     section => 'mysqld',
   }
   # Start of [mysqld] settings
   ini_setting { 'innodb_buffer_pool_size':
-    section => 'mysqld',
     setting => 'innodb_buffer_pool_size',
     value   => $innodb_buffer_pool_size_value,
   }

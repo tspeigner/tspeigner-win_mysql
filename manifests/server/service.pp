@@ -5,7 +5,7 @@
 #
 class win_mysql::server::service {
   service { 'MySQL':
-    ensure    => running,
+    ensure    => $win_mysql::server::service::ensure,
     enable    => true,
     subscribe => Class['win_mysql::server::config'],
   }
