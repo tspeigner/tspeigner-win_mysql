@@ -1,0 +1,6 @@
+---
+win_mysql::client::install::workbench_version: 'latest'
+win_mysql::server::install::server_version: 'latest'
+win_mysql::server::config::config_file: 'c:/tools/mysql/current/my.ini'
+win_mysql::server::service::ensure: 'running'
+

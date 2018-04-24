@@ -11,3 +11,7 @@ tests/
 log/
 junit/
 tmp/
+/archive/
+/bin/
+/spec/
+/pkg/

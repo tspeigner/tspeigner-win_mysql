@@ -43,13 +43,3 @@ This module has been tested on Windows 2012 adn Windows 2016.  Currently, in 201
 ## Development
 
 Fork it, develop it, push it.  Or just give feedback, you won't hurt my feelings.
-
-## Release Notes
-
-0.1.0 is the first release and there will definitely be cleanup.  Looking to move the params to hiera.
-
-0.1.1 fixes some linting errors adds OS support information and fixed unbounded ranges on dependencies.
-
-0.1.2 added tags to metadata.
-
-0.1.3 //TO ADD
