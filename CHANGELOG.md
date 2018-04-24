@@ -24,4 +24,14 @@ Added tags to metadata.
 
 **Features**
 
+<<<<<<< HEAD
 Moving data to Hiera {data/common.yaml}
+=======
+Moving data to Hiera {data/common.yaml}
+
+## Release 0.2.0
+
+**Features**
+
+Added Puppet Tasks: Run SQL and Export DB
+>>>>>>> 680f698462f7653d861e6ae409ef57a75751f514

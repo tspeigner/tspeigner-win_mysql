@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import/
-/spec/fixtures/
-.tmp
-*.lock
-*.local
-.rbenv-gemsets
-.ruby-version
-build/
-docs/
-tests/
-log/
-junit/
-tmp/
-/archive/
-/bin/
-/spec/
-/pkg/
-=======
 .*.sw[op]
 .metadata
 .yardoc
@@ -39,4 +20,3 @@ tmp/
 /vendor/
 /convert_report.txt
 .DS_Store
->>>>>>> 680f698462f7653d861e6ae409ef57a75751f514
